@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Productinterface } from './product.interface';
+import { Product } from './product.interface';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -10,7 +10,7 @@ export class ProductService {
     'data',
     'products.json',
   );
-  findAll(): Productinterface<object>[] {
+  findAll(): Product[] {
     const fileContent = fs.readFileSync(this.productPath, 'utf-8');
     return JSON.parse(fileContent);
   }

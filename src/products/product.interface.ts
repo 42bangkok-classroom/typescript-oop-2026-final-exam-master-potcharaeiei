@@ -1,8 +1,13 @@
-export interface Productinterface<T> {
-  success: boolean;
-  id: string;
+export interface Product {
+  id: number;
   name: string;
-  price: T | null;
-  stock: T | null;
+  price: number;
+  stock: number;
   description: string;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  message: string;
 }
