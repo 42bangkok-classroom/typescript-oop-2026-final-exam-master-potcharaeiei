@@ -8,7 +8,7 @@ export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
   @Get()
-  getAllProducts(): ApiResponse<Product[]> {
+  getAllProducts(): ApiResponse<Product<object>[]> {
     const products = this.productService.findAll();
     return {
       success: true,

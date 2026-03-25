@@ -10,7 +10,8 @@ export class ProductService {
     'data',
     'products.json',
   );
-  findAll(): Product[] {
+
+  findAll(): Product<object>[] {
     const fileContent = fs.readFileSync(this.productPath, 'utf-8');
     return JSON.parse(fileContent);
   }

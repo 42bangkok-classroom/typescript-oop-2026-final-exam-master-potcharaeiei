@@ -1,11 +1,10 @@
-export interface Product {
+export interface Product<T> {
   id: number;
   name: string;
   price: number;
   stock: number;
   description: string;
 }
-
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
