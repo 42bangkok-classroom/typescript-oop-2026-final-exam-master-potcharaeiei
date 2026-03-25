@@ -3,7 +3,7 @@ import { ApiResponse } from './interfaces/response.interface';
 
 @Injectable()
 export class AppService {
-  getHello(): ApiResponse<any> {
+  getHello(): ApiResponse<object> {
     return {
       success: true,
       data: {
